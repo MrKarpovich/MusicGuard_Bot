@@ -5,10 +5,12 @@ from aiogram.utils import executor
 import asyncio
 import time
 
-API_TOKEN = '7516352227:AAHv1RFI-aNlRZJJdS1nS9fopUCRZ40dfIk'
-DISCOGS_API_KEY = 'EuUMoQJolWDmwKjWFQYmDQIYDciYeWuwpjLGUBkA'
-YOUTUBE_API_KEY = 'AIzaSyBvGSDRqsqbCX2V_DdzzeKbgjjropyEF_0'
-CC_API_URL = 'https://api.openverse.org/v1/audio/'
+load_dotenv()  # Загружает переменные из .env файла
+
+API_TOKEN = os.getenv('API_TOKEN')
+DISCOGS_API_KEY = os.getenv('DISCOGS_API_KEY')
+YOUTUBE_API_KEY = os.getenv('YOUTUBE_API_KEY')
+CC_API_URL = os.getenv('CC_API_URL')
 
 logging.basicConfig(level=logging.INFO)
 
